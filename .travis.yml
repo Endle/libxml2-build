@@ -13,6 +13,7 @@ language: c
 compiler:
   - gcc
 script:
+  - cd code
   - unset CC
   - sudo update-binfmts --disable wine
   - ./configure --host=i686-w64-mingw32
