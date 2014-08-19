@@ -10,6 +10,7 @@ before_script:
   - sudo apt-get install -y gcc-mingw-w64-i686
   - sudo apt-get install -y wine1.7
   - sudo apt-get install -y binfmt-support
+  - sudo apt-get install -y python-all python-all-dev
 language: c
 compiler:
   - gcc
@@ -19,7 +20,7 @@ script:
   - sudo update-binfmts --disable wine
   - ./autogen.sh --host=i686-w64-mingw32
   - make
-  - sudo update-binfmts --enable wine
-  - wineboot
-  - export WINEDEBUG=-all
-  - make tests
+  #- sudo update-binfmts --enable wine
+  #- wineboot
+  #- export WINEDEBUG=-all
+  #- make tests
