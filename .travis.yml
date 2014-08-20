@@ -12,7 +12,7 @@ before_script:
   - sudo apt-get install -y binfmt-support
   - sudo apt-get install -y libxml2-dev
   - sudo apt-get build-dep -y python-all python-all-dev
-  - sudo apt-get build-dep -y libxml2 libc6-dev
+  - sudo apt-get build-dep -y libxml2-dev libc6-dev
 language: c
 compiler:
   - gcc
@@ -20,7 +20,7 @@ script:
   - cd code
   - unset CC
   - sudo update-binfmts --disable wine
-  - ./autogen.sh --host=i86-w64-mingw32 --target==i86-w64-mingw32 --prefix=/usr/i686-w64-mingw32 CFLAGS="-O0 -I/usr/i686-w64-mingw32/include"
+  - ./autogen.sh --host=i86-w64-mingw32 --prefix=/usr/i686-w64-mingw32
   - make
   #- sudo update-binfmts --enable wine
   #- wineboot
