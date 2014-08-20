@@ -20,7 +20,7 @@ script:
   - cd code
   - unset CC
   - sudo update-binfmts --disable wine
-  - ./autogen.sh --host=i86-w64-mingw32
+  - ./autogen.sh --host=i86-w64-mingw32 --prefix=/usr/i686-w64-mingw32
   - make
   #- sudo update-binfmts --enable wine
   #- wineboot
