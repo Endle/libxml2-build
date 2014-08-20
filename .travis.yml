@@ -10,6 +10,7 @@ before_script:
   - sudo apt-get install -y gcc-mingw-w64-i686
   - sudo apt-get install -y wine1.7
   - sudo apt-get install -y binfmt-support
+  - sudo apt-get install -y libxml2-dev
   - sudo apt-get build-dep -y python-all python-all-dev
   - sudo apt-get build-dep -y libxml2 libc6-dev
 language: c
@@ -19,7 +20,7 @@ script:
   - cd code
   - unset CC
   - sudo update-binfmts --disable wine
-  - ./autogen.sh --host=i86-w64-mingw32 --prefix=/usr
+  - ./autogen.sh --host=i86-w64-mingw32
   - make
   #- sudo update-binfmts --enable wine
   #- wineboot
