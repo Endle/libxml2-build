@@ -20,7 +20,7 @@ script:
   - cd code
   - unset CC
   - sudo update-binfmts --disable wine
-  - ./autogen.sh  --host=i686-w64-mingw32
+  - ./autogen.sh  --host=i686-w64-mingw32 --without-python
   - make CPPFLAGS+=-I/usr/include/x86_64-linux-gnu
   #- sudo update-binfmts --enable wine
   #- wineboot
