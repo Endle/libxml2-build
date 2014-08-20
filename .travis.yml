@@ -25,6 +25,7 @@ script:
   - export CC=i686-w64-mingw32-gcc
   - export AR=i686-w64-mingw32-ar
   - export RANLIB=i686-w64-mingw32-ranlib
+  - export LD=i686-w64-mingw32-ld
   - make
   #- sudo update-binfmts --enable wine
   #- wineboot
