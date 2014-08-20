@@ -27,7 +27,7 @@ script:
   - export LD=i686-w64-mingw32-ld
 
   - ./autogen.sh --host=i686-w64-mingw32 --build=x86_64-pc-linux-gnu CPPFLAGS="{$CPPFLAGS} -I/usr/include/x86_64-linux-gnu"
-  - ./configure --host=i686-w64-mingw32
+  - ./configure --host=i686-w64-mingw32 --build=x86_64-pc-linux-gnu CPPFLAGS="{$CPPFLAGS} -I/usr/include/x86_64-linux-gnu"
   - make
   #- sudo update-binfmts --enable wine
   #- wineboot
