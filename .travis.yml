@@ -11,6 +11,7 @@ before_script:
   - sudo apt-get install -y wine1.7
   - sudo apt-get install -y binfmt-support
   - sudo apt-get install -y python-all python-all-dev
+  - sudo apt-get build-dep -y libxml2
 language: c
 compiler:
   - gcc
