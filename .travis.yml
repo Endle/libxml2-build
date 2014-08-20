@@ -32,3 +32,7 @@ script:
   #- wineboot
   #- export WINEDEBUG=-all
   #- make tests
+
+notifications:
+  email: false
+  slack: winezh:BE5bq4pZBesONq09c2GYqYxl
