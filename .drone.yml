@@ -17,3 +17,4 @@ script:
   - ./autogen.sh  --host=i686-w64-mingw32 --build=x86_64-pc-linux --without-python CPPFLAGS="${CPPFLAGS} -I/usr/include/x86_64-linux-gnu"
   - make
 
+
