@@ -1,4 +1,4 @@
-image: ubuntu:12.04
+image: endle/travis-simulate-docker
 
 script:
   - sudo add-apt-repository -y ppa:ubuntu-wine/ppa
