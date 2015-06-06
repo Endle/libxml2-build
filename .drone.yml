@@ -1,7 +1,7 @@
 image: endle/wine-fedora:v1
 
 script:
-  - sudo dnf install mingw32-xz-libs -y
+  - dnf install mingw32-xz-libs -y
   - cd code
   - unset CC
   - ./autogen.sh  --host=i686-w64-mingw32 --build=x86_64-pc-linux --without-python CPPFLAGS="${CPPFLAGS} -I/usr/include/x86_64-linux-gnu"
